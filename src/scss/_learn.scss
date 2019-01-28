@@ -1,0 +1,77 @@
+.learn {
+    @extend .slide;
+    &__inner {
+        @extend .container;
+    }
+    &__item {
+        transition: .25s all ease;
+        padding: 0 15px;
+        width: 25%;
+        a {
+            display: block;
+            padding: 30px 15px 30px 60px;
+            text-decoration: none;
+            height: 100%;
+            border: 1px solid rgba(0, 76, 131, 0.1);
+        }
+        &:hover {
+            background: rgba(0, 76, 131, 0.1);
+        }
+        &__list {
+            margin: 0 -15px;
+            display: flex;
+        }
+        &__title {
+            color: #232323;
+            font-size: 18px;
+            line-height: 28px;
+            width: 100%;
+            margin-bottom: 15px;
+            min-height: 60px;
+        }
+        &__text {
+            width: 100%;
+            p {
+                margin: 0;
+                color: #232323;
+                line-height: 25px;
+                font-size: 16px;
+            }
+        }
+        &__inner {
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            flex-direction: column;
+            position: relative;
+            &::before {
+                content: url(../../img/svg/sprites.svg#learn);
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                left: -35px;
+                top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1400) {
+    .learn {
+        &__item {
+            width: 50%;
+            margin-bottom: 30px;
+            &__list {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .learn {
+        &__item {
+            width: 100%;
+        }
+    }
+}

@@ -4,5 +4,23 @@
             <span>&copy; 2001 - 2017</span>
             @@include('../items/_logo.html')
         </div>
+        @@include('../items/_footer-infoblock.html', {
+            "title": "Адрес и телефон:",
+            "text": "<p>302028, город Орёл, бульвар Победы д.6 пом.7</p><a href='tel:74862599767'>+7 (4862) 59-97-67</a>"
+        })
+        @@include('../items/_footer-infoblock.html', {
+            "title": "График работы:",
+            "text": "<p>Пн-Пт: 9-00 до 17-30. Перерыв 13:00-13:30</p><p>Сб-Вс: выходной</p>"
+        })
+        <div class="footer__dorohov">
+            <a href="#">
+                <div class="footer__dorohov--text">
+                    Дизайн и разработка
+                </div>
+                <div class="footer__dorohov--img">
+                    @@include('../items/_svg.html', {"name": "dorohov"})
+                </div>
+            </a>
+        </div>
     </div>
 </div>

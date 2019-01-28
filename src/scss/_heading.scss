@@ -10,6 +10,13 @@
             }
         }
     }
+    &.is--medium {
+        .heading {
+            &__title {
+                font-weight: 500;
+            }
+        }
+    }
     &__inner {
         @extend .container;
     }

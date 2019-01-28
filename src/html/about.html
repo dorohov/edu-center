@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('main/_head.html', {"title": "О центре"})
+</head>
+<body>
+    <header>
+        @@include('main/_navbar.html')
+    </header>
+    <main>
+        @@include('items/_jilb.html', {
+            "bg": 2,
+            "title": "Описание центра",
+            "text": "<p>Учебные курсы проходят несколько раз в год, занятия проводятся ежедневно, за исключением выходных и праздничных дней. Более подробную информацию можно найти в описании соответствующего курса.</p><p>Обучение в образовательной организации проводится по учебным курсам, продолжительность которых определяется объемом соответствующих учебных планов, разработанных на основе государственных стандартов и типовых учебных программ подготовки работников на производстве.</p>",
+            "button_url": false
+        })
+        @@include('items/_learn.html')
+        @@include('items/_documents.html')
+        @@include('items/_speciality.html')
+        @@include('items/_form.html')
+    </main>
+    @@include('main/_footer.html')
+    @@include('main/_scripts.html')
+</body>
+</html>

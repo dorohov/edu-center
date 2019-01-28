@@ -1,2 +1,27 @@
 <script src="dist/js/jquery-3.3.1.min.js"></script>
+<script src="dist/js/slick.min.js"></script>
 <script src="dist/js/main.js"></script>
+<script>
+$(document).ready(function() {
+    $('.documents__slider').slick({
+        slidesToShow: 5,
+        infinite: true,
+        prevArrow: '.documents__arrow.is--prev',
+        nextArrow: '.documents__arrow.is--next',
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
+    });
+});
+</script>
