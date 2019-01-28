@@ -1,0 +1,56 @@
+.form {
+    @extend .slide;
+    background-image: url(../../img/form_bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #F8F8F8;
+    &__inner {
+        @extend .container;
+        form {
+            max-width: 555px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+}
+
+.input_group {
+    position: relative;
+    margin-bottom: 15px;
+    label {
+        height: 58px;
+        position: absolute;
+        width: 60px;
+        background: #F0F4F8;
+        left: 1px;
+        top: 1px;
+        border-right: 1px solid #CCDBE6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 0px 30px 0px 80px;
+    width: 100%;
+    border: 1px solid #CCDBE6;
+    outline: none;
+    height: 60px;
+    color: rgba(134, 134, 134, 0.5);
+    font-size: 16px;
+    &::placeholder {
+        color: rgba(134, 134, 134, 0.5);
+    }
+}
+
+input[type="submit"] {
+    display: none;
+}
+
+.input_submit {
+    text-align: center;
+    padding-top: 20px;
+}

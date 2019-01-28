@@ -1,0 +1,17 @@
+<div class="jilb is--bg@@bg">
+    <div class="jilb__inner">
+        <div class="jilb__title">@@title</div>
+        <div class="jilb__content">
+            @@text
+        </div>
+        @@if(button_url) {
+            <div class="jilb__btn">
+                @@include('_button.html', {
+                    "type": "bordered",
+                    "text": "Подробнее",
+                    "url": "#"
+                })
+            </div>
+        }
+    </div>
+</div>

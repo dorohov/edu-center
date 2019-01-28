@@ -1,0 +1,18 @@
+.container {
+    max-width: $grid_width;
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.slide {
+    padding-top: 80px;
+    padding-bottom: 70px;
+}
+
+@media(max-width: $resp768) {
+    .slide {
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+}

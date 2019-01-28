@@ -1,0 +1,111 @@
+.jilb {
+    background: #004C83;
+    &.is--bg {
+        &1 {
+            background-image: url(../../img/svg/sprites.svg#bg1);
+            background-repeat: no-repeat;
+            background-size: auto 90%;
+            background-position: 80% center;
+            .jilb {
+                &__inner {
+                    padding-top: 110px;
+                    padding-bottom: 130px;
+                }
+                &__title {
+                    text-transform: uppercase;
+                }
+                &__content {
+                    max-width: 675px;
+                }
+            }
+        }
+        &2 {
+            background-image: url(../../img/svg/sprites.svg#bg2);
+            background-repeat: no-repeat;
+            background-size: auto 115%;
+            background-position: center right;
+            .jilb {
+                &__inner {
+                    padding-top: 110px;
+                    padding-bottom: 130px;
+                }
+                &__content {
+                    max-width: 915px;
+                }
+            }
+        }
+    }
+    &__title {
+        line-height: 56px;
+        font-size: 42px;
+        color: #fff;
+        max-width: 1020px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    &__content {
+        p {
+            line-height: 23px;
+            font-size: 18px;
+            color: #fff;
+            margin: 0 0 40px 0;
+        }
+    }
+    &__inner {
+        @extend .container;
+    }
+}
+
+@media (max-width: $resp1400) {
+    .jilb {
+        background-image: none !important;
+        &.is--bg {
+            &1 {
+                .jilb {
+                    &__inner {
+                        padding-top: 60px;
+                        padding-bottom: 60px;
+                    }
+                    &__title {
+                        font-size: 28px;
+                        line-height: 32px;
+                        margin-bottom: 10px;
+                    }
+                    &__content {
+                        p {
+                            font-size: 16px;
+                            line-height: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $resp768) {
+    .jilb {
+        &.is--bg {
+            &1 {
+                .jilb {
+                    &__inner {
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                    }
+                    &__title {
+                        font-size: 20px;
+                        line-height: 22px;
+                        margin-bottom: 10px;
+                    }
+                    &__content {
+                        p {
+                            font-size: 14px;
+                            line-height: 18px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

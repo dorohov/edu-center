@@ -1,0 +1,180 @@
+.navbar {
+    background: $navbar_bg;
+    z-index: 100;
+    &__inner {
+        height: $navbar_height;
+        @extend .container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__menu {
+        height: 100%;
+    }
+    &__info {
+        &__inner {
+            display: flex;
+            &.is--mobile {
+                display: block;
+                .navbar__info {
+                    &__item {
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+        }
+        &__item {
+            margin-left: 40px;
+            &:first-child {
+                margin-left: 0;
+            }
+            a {
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+            &__ico {
+                margin-right: 10px;
+            }
+            &__text {
+                font-size: 20px;
+                color: $menu_color;
+                transition: .25s all ease;
+                white-space: nowrap;
+                &:hover {
+                    color: $menu_hover_color;
+                }
+            }
+        }
+    }
+    &__mobile {
+        &--btn {
+            display: none;
+            height: 100%;
+            .hamburger {
+                padding-top: 0;
+                padding-bottom: 0;
+                height: 100%;
+                outline: none;
+                &-inner {
+                    background: $menu_hover_color !important;
+                    &::after,
+                    &::before {
+                        background: $menu_hover_color !important;
+
+                    }
+                }
+            }
+        }
+        &--container {
+            height: calc(100% - #{$navbar_height});
+            position: fixed;
+            top: $navbar_height;
+            width: 100%;
+            background: $menu_mobile_bg;
+            z-index: 100;
+            left: -100%;
+            visibility: hidden;
+            opacity: 0;
+            transition: .25s all ease;
+            padding: 50px;
+            display: none;
+            .menu {
+                &.is--mobile {
+                    display: block;
+                    margin-bottom: 30px;
+                    li {
+                        a {
+                            padding: 10px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.is--mobile_menu {
+    .navbar__mobile--container {
+        opacity: 1;
+        visibility: visible;
+        left: 0;
+    }
+}
+
+.logo {
+    font-family: 'Playfair Display';
+    color: $logo_color;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    height: 100%;
+    li {
+        height: 100%;
+        a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 25px;
+            color: $menu-color;
+            font-size: 18px;
+            text-decoration: none;
+            transition: .25s all ease;
+        }
+        &.is--active,
+        &:hover {
+            a {
+                color: $menu_hover_color;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1400) {
+    .navbar {
+        &__info {
+            &__inner {
+                &.is--default {
+                    .navbar__info__item {
+                        margin-left: 0;
+                        &__text {
+                            display: none;
+                        }
+                        &__ico {
+                            margin: 0 0 0 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .menu {
+        li {
+            a {
+                padding: 0 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1025) {
+    .navbar {
+        &__info,
+        &__menu {
+            display: none;
+        }
+        &__mobile {
+            &--btn,
+            &--container {
+                display: block;
+            }
+        }
+    }
+}

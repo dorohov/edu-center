@@ -1,0 +1,26 @@
+<div class="navbar">
+    <div class="navbar__inner">
+        <div class="navbar__logo">
+            @@include('../items/_logo.html')
+        </div>
+        <div class="navbar__menu">
+            @@include('../items/_navbar-menu.html', {"prefix": "default"})
+        </div>
+        <div class="navbar__info">
+            @@include('../items/_navbar-info.html', {"prefix": "default"})
+        </div>
+        <div class="navbar__mobile--btn">
+            <button class="hamburger hamburger--collapse" type="button">
+                <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+                </span>
+              </button>
+        </div>
+        <div class="navbar__mobile--container">
+            <div class="navbar__mobile--container__inner">
+                @@include('../items/_navbar-menu.html', {"prefix": "mobile"})
+                @@include('../items/_navbar-info.html', {"prefix": "mobile"})
+            </div>
+        </div>
+    </div>
+</div>

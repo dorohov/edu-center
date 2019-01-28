@@ -1,0 +1,16 @@
+.footer {
+    background: $footer_bg;
+    &__inner {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @extend .container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        span {
+            display: block;
+        }
+    }
+}

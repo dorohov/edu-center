@@ -4,7 +4,21 @@
     @@include('main/_head.html', {"title": "Главная"})
 </head>
 <body>
-    eee
+    <header>
+        @@include('main/_navbar.html')
+    </header>
+    <main>
+        @@include('items/_jilb.html', {
+            "bg": 1,
+            "title": "Учебный центр повышения квалификации и профессиональной переподготовки",
+            "text": "<p>ООО «Орловский учебный центр» - это организация, занимающаяся профессиональным обучением рабочих и дополнительным обучением руководителей и специалистов.</p>",
+            "button_url": "#",
+            "button_text": "Подробнее"
+        })
+        @@include('items/_speciality.html')
+        @@include('items/_form.html')
+        @@include('items/_map-big.html')
+    </main>
     @@include('main/_footer.html')
     @@include('main/_scripts.html')
 </body>
