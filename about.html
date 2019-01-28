@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
+        <div class="navbar is--default">
     <div class="navbar__inner">
         <div class="navbar__logo">
             <a href="index.html" class="logo">«Орловский учебный центр»</a>
@@ -19,7 +19,7 @@
             <ul class="menu is--default">
     <li class="is--active"><a href="index.html">Главная</a></li>
     <li><a href="about.html">О центре</a></li>
-    <li><a href="#">Программы</a></li>
+    <li><a href="programs.html">Программы</a></li>
     <li><a href="#">Новости</a></li>
     <li><a href="#">Контакты</a></li>
 </ul>
@@ -60,7 +60,7 @@
                 <ul class="menu is--mobile">
     <li class="is--active"><a href="index.html">Главная</a></li>
     <li><a href="about.html">О центре</a></li>
-    <li><a href="#">Программы</a></li>
+    <li><a href="programs.html">Программы</a></li>
     <li><a href="#">Новости</a></li>
     <li><a href="#">Контакты</a></li>
 </ul>
@@ -500,28 +500,28 @@
     <div class="form__inner">
         <form action="#">
             <div class="input_group is--name">
+                <input type="text" name="name" id="name" placeholder="Ваше имя">
                 <label for="name">
                     <svg class="svg-input_name-dims">
     <use xlink:href="img/svg/sprites.svg#input_name"></use>
 </svg>
                 </label>
-                <input type="text" name="name" id="name" placeholder="Ваше имя">
             </div>
             <div class="input_group is--phone">
+                <input type="text" name="phone" id="phone" placeholder="Ваш телефон">
                 <label for="phone">
                     <svg class="svg-input_phone-dims">
     <use xlink:href="img/svg/sprites.svg#input_phone"></use>
 </svg>
                 </label>
-                <input type="text" name="phone" id="phone" placeholder="Ваш телефон">
             </div>
             <div class="input_group is--email">
+                <input type="email" name="email" id="email" placeholder="Ваш e-mail">
                 <label for="email">
                     <svg class="svg-input_email-dims">
     <use xlink:href="img/svg/sprites.svg#input_email"></use>
 </svg>
                 </label>
-                <input type="email" name="email" id="email" placeholder="Ваш e-mail">
             </div>
             <div class="input_submit">
                 <label for="submit" class="button is--default">Оставить заявку</label>
@@ -564,6 +564,7 @@
     </div>
 </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
+<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 <script src="dist/js/slick.min.js"></script>
 <script src="dist/js/main.js"></script>
 <script>
@@ -590,5 +591,18 @@ $(document).ready(function() {
     });
 });
 </script>
+<script>
+        var map;
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [52.974208, 36.058995],
+                zoom: 13,
+                fullscreenControl: false,
+                zoomControl: false
+            });
+    
+            DG.marker([52.974208, 36.058995]).addTo(map);
+        });
+    </script>
 </body>
 </html>

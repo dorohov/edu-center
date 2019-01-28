@@ -38,6 +38,10 @@
         position: absolute;
         top: 50%;
         margin-top: -31px;
+        transition: .25s all ease;
+        &:hover {
+            background: #E5EDF3;
+        }
         &.is--prev {
             left: 15px;
         }

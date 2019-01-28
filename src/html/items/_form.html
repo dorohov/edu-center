@@ -8,22 +8,22 @@
     <div class="form__inner">
         <form action="#">
             <div class="input_group is--name">
+                <input type="text" name="name" id="name" placeholder="Ваше имя">
                 <label for="name">
                     @@include('_svg.html', {"name": "input_name"})
                 </label>
-                <input type="text" name="name" id="name" placeholder="Ваше имя">
             </div>
             <div class="input_group is--phone">
+                <input type="text" name="phone" id="phone" placeholder="Ваш телефон">
                 <label for="phone">
                     @@include('_svg.html', {"name": "input_phone"})
                 </label>
-                <input type="text" name="phone" id="phone" placeholder="Ваш телефон">
             </div>
             <div class="input_group is--email">
+                <input type="email" name="email" id="email" placeholder="Ваш e-mail">
                 <label for="email">
                     @@include('_svg.html', {"name": "input_email"})
                 </label>
-                <input type="email" name="email" id="email" placeholder="Ваш e-mail">
             </div>
             <div class="input_submit">
                 <label for="submit" class="button is--default">Оставить заявку</label>

@@ -1,0 +1,10 @@
+<div class="breadcrumbs">
+    <div class="breadcrumbs__inner">
+        <ul>
+            @@for(var i = 0; i < items.length; i++) {
+                <li><a href="`+items[i].url+`">`+items[i].title+`</a></li>
+            }
+            <li>@@target</li>
+        </ul>
+    </div>
+</div>

@@ -4,18 +4,18 @@
         @extend .container;
     }
     &__item {
-        transition: .25s all ease;
         padding: 0 15px;
         width: 25%;
         a {
+            transition: .25s all ease;
             display: block;
             padding: 30px 15px 30px 60px;
             text-decoration: none;
             height: 100%;
             border: 1px solid rgba(0, 76, 131, 0.1);
-        }
-        &:hover {
-            background: rgba(0, 76, 131, 0.1);
+            &:hover {
+                background: rgba(0, 76, 131, 0.1);
+            }
         }
         &__list {
             margin: 0 -15px;

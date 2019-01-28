@@ -1,6 +1,25 @@
 .navbar {
     background: $navbar_bg;
     z-index: 100;
+    &.is--border {
+        .navbar {
+            &__inner {
+               position: relative;
+               &::after {
+                   content: '';
+                   height: 1px;
+                   max-width: 1720px;
+                   width: 100%;
+                   margin: 0 auto;
+                   background: #80A5C1;
+                   position: absolute;
+                   left: 0;
+                   right: 0;
+                   bottom: 0;
+               }
+            }
+        }
+    }
     &__inner {
         height: $navbar_height;
         @extend .container;

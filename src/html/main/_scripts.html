@@ -1,4 +1,5 @@
 <script src="dist/js/jquery-3.3.1.min.js"></script>
+<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
 <script src="dist/js/slick.min.js"></script>
 <script src="dist/js/main.js"></script>
 <script>
@@ -25,3 +26,16 @@ $(document).ready(function() {
     });
 });
 </script>
+<script>
+        var map;
+        DG.then(function () {
+            map = DG.map('map', {
+                center: [52.974208, 36.058995],
+                zoom: 13,
+                fullscreenControl: false,
+                zoomControl: false
+            });
+    
+            DG.marker([52.974208, 36.058995]).addTo(map);
+        });
+    </script>
