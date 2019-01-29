@@ -8,19 +8,19 @@
     <div class="form__inner">
         <form action="#" data-parsley-validate="">
             <div class="input_group is--name">
-                <input type="text" name="name" id="name" placeholder="Ваше имя" required="">
+                <input type="text" name="name" id="name" placeholder="Ваше имя" required="" data-parsley-no-focus>
                 <label for="name">
                     @@include('_svg.html', {"name": "input_name"})
                 </label>
             </div>
             <div class="input_group is--phone">
-                <input type="text" name="phone" id="phone" placeholder="Ваш телефон" required="">
+                <input type="text" name="phone" id="phone" placeholder="Ваш телефон" required="" data-parsley-no-focus>
                 <label for="phone">
                     @@include('_svg.html', {"name": "input_phone"})
                 </label>
             </div>
             <div class="input_group is--email">
-                <input type="email" name="email" id="email" placeholder="Ваш e-mail">
+                <input type="email" name="email" id="email" placeholder="Ваш e-mail" data-parsley-no-focus>
                 <label for="email">
                     @@include('_svg.html', {"name": "input_email"})
                 </label>
