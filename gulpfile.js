@@ -14,6 +14,7 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),                
     rename = require('gulp-rename'),
     notify = require("gulp-notify"),
+    minify = require('gulp-minify'),
     htmlbeautify = require('gulp-html-beautify'),
     sourcemaps = require('gulp-sourcemaps');
     // fontgen = require('gulp-fontgen');
@@ -111,12 +112,29 @@ function browser_sync() {
     browserSync.watch('./', browserSync.reload)
 }
 
+function createBundleJs() {
+    return gulp.src([
+                'dist/js/slick.min.js',
+                'dist/js/parsley.min.js',
+                'dist/js/i18n/ru.js',
+                'dist/js/imask.js',
+                'dist/js/svg4everybody.min.js',
+                'dist/js/main.js'
+            ])
+            .pipe(sourcemaps.init())
+            .pipe(concat('bundle.js'))
+            .pipe(minify())
+            .pipe(gulp.dest('dist/js'))
+            .on('end', browserSync.reload)
+}
+
 gulp.task('css', css)
 gulp.task('svgMap', svgMap)
 gulp.task('imageMinify', imageMinify)
 gulp.task('html', html)
 // gulp.task('htmlNormalize', htmlNormalize)
 gulp.task('js', js)
+gulp.task('createBundleJs', createBundleJs)
 // gulp.task('fonts', fonts)
 gulp.task('browser_sync', browser_sync)
 
@@ -124,6 +142,7 @@ gulp.task('build', function() {
     gulp.watch('src/html/**/*.html', gulp.series('html'))
     gulp.watch('src/scss/**/*.scss', gulp.series('css'))
     gulp.watch(assets.js, gulp.series('js'))
+    gulp.watch('dist/js/main.js', gulp.series('createBundleJs'))
     // gulp.watch(assets.fonts, gulp.series('fonts'))
     gulp.watch(assets.svg, gulp.series('svgMap'))
     gulp.watch(assets.images, gulp.series('imageMinify'))
@@ -131,6 +150,6 @@ gulp.task('build', function() {
 })
 
 gulp.task('default', gulp.series(
-    gulp.parallel('html', 'css', 'js', 'svgMap', 'imageMinify'),
+    gulp.parallel('html', 'css', 'js', 'createBundleJs', 'svgMap', 'imageMinify'),
     gulp.parallel('build', 'browser_sync')
 ))

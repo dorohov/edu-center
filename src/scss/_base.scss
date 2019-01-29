@@ -16,10 +16,19 @@ iframe {
     vertical-align: top;
 }
 
-* {
-    transition: .25s all ease;
+.mb-5 {
+    margin-bottom: 50px !important;
 }
 
-.mb-5 {
-    margin-bottom: 50px;
+.ruble {
+    font-family: Arial, 'Roboto';
+}
+
+.map-big #map {
+    width: 100%;
+    height: 500px;
+}
+
+.is--menuopen {
+    overflow: hidden;
 }

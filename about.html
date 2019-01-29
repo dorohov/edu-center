@@ -20,8 +20,8 @@
     <li class="is--active"><a href="index.html">Главная</a></li>
     <li><a href="about.html">О центре</a></li>
     <li><a href="programs.html">Программы</a></li>
-    <li><a href="#">Новости</a></li>
-    <li><a href="#">Контакты</a></li>
+    <li><a href="news.html">Новости</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
 </ul>
         </div>
         <div class="navbar__info">
@@ -61,8 +61,8 @@
     <li class="is--active"><a href="index.html">Главная</a></li>
     <li><a href="about.html">О центре</a></li>
     <li><a href="programs.html">Программы</a></li>
-    <li><a href="#">Новости</a></li>
-    <li><a href="#">Контакты</a></li>
+    <li><a href="news.html">Новости</a></li>
+    <li><a href="contacts.html">Контакты</a></li>
 </ul>
                 <div class="navbar__info__inner is--mobile">
     <div class="navbar__info__item">
@@ -315,7 +315,7 @@
     <div class="speciality__inner">
         <ul class="speciality__list">
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -329,7 +329,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -343,7 +343,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -357,7 +357,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -371,7 +371,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -385,7 +385,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -399,7 +399,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -413,7 +413,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -427,7 +427,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -441,7 +441,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -455,7 +455,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -469,7 +469,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="program.html">
                     <div class="speciality__item">
     <div class="speciality__item__inner">
         <div class="speciality__item__ico">
@@ -485,7 +485,7 @@
         </ul>
     </div>
     <div class="speciality__btn">
-        <a href="#" class="button is--default">Все специальности</a>
+        <a href="programs.html" class="button is--default">Все специальности</a>
     </div>
 </div>
         <div class="form">
@@ -498,9 +498,9 @@
     </div>
 </div>
     <div class="form__inner">
-        <form action="#">
+        <form action="#" data-parsley-validate="">
             <div class="input_group is--name">
-                <input type="text" name="name" id="name" placeholder="Ваше имя">
+                <input type="text" name="name" id="name" placeholder="Ваше имя" required="">
                 <label for="name">
                     <svg class="svg-input_name-dims">
     <use xlink:href="img/svg/sprites.svg#input_name"></use>
@@ -508,7 +508,7 @@
                 </label>
             </div>
             <div class="input_group is--phone">
-                <input type="text" name="phone" id="phone" placeholder="Ваш телефон">
+                <input type="text" name="phone" id="phone" placeholder="Ваш телефон" required="">
                 <label for="phone">
                     <svg class="svg-input_phone-dims">
     <use xlink:href="img/svg/sprites.svg#input_phone"></use>
@@ -565,44 +565,6 @@
 </div>
     <script src="dist/js/jquery-3.3.1.min.js"></script>
 <script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full"></script>
-<script src="dist/js/slick.min.js"></script>
-<script src="dist/js/main.js"></script>
-<script>
-$(document).ready(function() {
-    $('.documents__slider').slick({
-        slidesToShow: 5,
-        infinite: true,
-        prevArrow: '.documents__arrow.is--prev',
-        nextArrow: '.documents__arrow.is--next',
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow: 3
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1
-                }
-            }
-        ]
-    });
-});
-</script>
-<script>
-        var map;
-        DG.then(function () {
-            map = DG.map('map', {
-                center: [52.974208, 36.058995],
-                zoom: 13,
-                fullscreenControl: false,
-                zoomControl: false
-            });
-    
-            DG.marker([52.974208, 36.058995]).addTo(map);
-        });
-    </script>
+<script src="dist/js/bundle-min.js"></script>
 </body>
 </html>

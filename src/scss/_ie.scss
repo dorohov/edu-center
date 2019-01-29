@@ -1,0 +1,13 @@
+.speciality__item svg,
+.navbar__info__item__ico svg {
+    fill: transparent;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    .jilb.is--bg1 {
+        background-position: 300%;
+    }
+    .jilb.is--bg2 {
+        background-position: -50%;
+    }
+ }

@@ -1,4 +1,93 @@
 table {
     width: 100%;
     border-collapse: collapse;
+    text-align: left;
+    &.is--medium {
+        tr {
+            td,
+            th {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+    }
+    tr {
+        th,
+        td {
+            padding: 25px 60px;
+        }
+        th {
+            line-height: 37px;
+            font-size: 24px;
+            color: #fff;
+            background: #004C83;
+        }
+        td {
+            border: 1px solid #CCDBE6;
+            color: #232323;
+            line-height: 25px;
+            font-size: 16px;
+            a {
+                color: #003D68;
+                text-decoration: none;
+            }
+            span {
+                @extend .ruble;
+            }
+        }
+    }
+}
+
+@media (max-width: $resp1400) {
+    table {
+        thead {
+            display: none;
+        }
+        tbody {
+            border-top: 1px solid #CCDBE6;
+            tr {
+                display: block;
+                td {
+                    display: block;
+                    padding: 10px 15px;
+                    border-top: 0;
+                    &::before {
+                        content: attr(data-title);
+                        display: block;
+                        margin-bottom: 10px;
+                        font-weight: bold;
+                    }
+                    &.is--table-title {
+                        background: #004C83;
+                        display: block;
+                        padding: 10px 15px;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        &.is--list {
+            tr {
+                &::before {
+                    content: attr(data-title);
+                    background: #004C83;
+                    display: block;
+                    text-align: center;
+                    padding: 10px 15px;
+                    color: #fff;
+                }
+                td {
+                    border-top: 0;
+                }
+            }
+        }
+    }
+
+    .__th {
+        display: none;
+    }
+}
+
+.__hws {
+    white-space: nowrap;
 }

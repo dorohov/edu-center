@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('main/_head.html', {"title": "Новости"})
+</head>
+<body>
+    <header>
+        @@include('main/_navbar.html', {"type": "border"})
+    </header>
+    <main>
+        <div class="news page">
+            <div class="news__inner">
+                @@include('items/_breadcrumbs.html', {
+                    "items": [
+                        {
+                            "title": "Главная",
+                            "url": "index.html"
+                        }
+                    ],
+                    "target": "Новости"
+                })
+                @@include('items/_heading.html', {
+                    "weight": "bold",
+                    "align": "left",
+                    "subtitle": false,
+                    "title": "Новости"
+                })
+                @@include('items/_news.html')
+                @@include('items/_pagination.html')
+            </div>
+        </div>
+    </main>
+    @@include('main/_footer.html')
+    @@include('main/_scripts.html')
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    @@include('main/_head.html', {"title": "Электромеханик по лифтам"})
+</head>
+<body>
+    <header>
+        @@include('main/_navbar.html', {"type": "border"})
+    </header>
+    <main>
+        <div class="programs page">
+            <div class="programs__inner">
+                @@include('items/_breadcrumbs.html', {
+                    "items": [
+                        {
+                            "title": "Главная",
+                            "url": "index.html"
+                        },
+                        {
+                            "title": "Программы",
+                            "url": "programs.html"
+                        }
+                    ],
+                    "target": "Электромеханик по лифтам"
+                })
+                @@include('items/_heading.html', {
+                    "weight": "bold",
+                    "align": "left",
+                    "subtitle": false,
+                    "title": "Электромеханик по лифтам"
+                })
+                <div class="sm-content">
+                    <p>Обучение по специальности «Электромеханик по лифтам». Целью обучения является подготовка новых рабочих по указанной профессии. 
+                        Категория слушателей:  высвобожденные  работники и  незанятое население.
+                         Срок обучения по данной программе составляет 120 часов, форма обучения - очная (с отрывом от производства).
+                         Режим занятий - 8 часов в день. Разряды, которые можно получить после нашего образования – от 2 до 6 включительно. Результатом обучения будет получение удостоверения или сертификата, подтверждающего прохождение курсов.</p>
+                </div>
+                <div class="program-price mb-5">
+                    <p>Стоимость: <b>4000</b> <span class="ruble">&#x20BD;</span></p>
+                    <p>Выдаваемый документ: <a href="#">свидетельство</a></p>
+                </div>
+                <div class="table">
+                    <table class="is--medium is--default">
+                        <thead>
+                            <tr>
+                                <th>№</th>
+                                <th>Наименование разделов, дисциплин и тем</th>
+                                <th>Всего часов</th>
+                                <th>Лекции</th>
+                                <th>Практика</th>
+                                <th>Форма контроля</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-title="№" class="is--table-title">1</td>
+                                <td data-title="Наименование разделов, дисциплин и тем">Общие положения </td>
+                                <td data-title="Всего часов">4</td>
+                                <td data-title="Лекции">2</td>
+                                <td data-title="Практика">2</td>
+                                <td data-title="Форма контроля">Тестирование</td>
+                            </tr>
+                            <tr>
+                                <td data-title="№" class="is--table-title">2</td>
+                                <td data-title="Наименование разделов, дисциплин и тем">Требования к системам газораспределения и газопотребления 
+                                    на этапе проектирования, строительства, реконструкции, монтажа 
+                                    и капитального ремонта</td>
+                                <td data-title="Всего часов">8</td>
+                                <td data-title="Лекции">2</td>
+                                <td data-title="Практика">6</td>
+                                <td data-title="Форма контроля">Тестирование</td>
+                            </tr>
+                            <tr>
+                                <td data-title="№" class="is--table-title">3</td>
+                                <td data-title="Наименование разделов, дисциплин и тем">Требования к эксплуатации систем газораспределения и газопотребления</td>
+                                <td data-title="Всего часов">6</td>
+                                <td data-title="Лекции">2</td>
+                                <td data-title="Практика">4</td>
+                                <td data-title="Форма контроля">Тестирование</td>
+                            </tr>
+                            <tr>
+                                <td data-title="№" class="is--table-title">4</td>
+                                <td data-title="Наименование разделов, дисциплин и тем">Требования к проведению газоопасных работ</td>
+                                <td data-title="Всего часов">8</td>
+                                <td data-title="Лекции">2</td>
+                                <td data-title="Практика">6</td>
+                                <td data-title="Форма контроля">Тестирование</td>
+                            </tr>
+                            <tr>
+                                <td data-title="№" class="is--table-title">5</td>
+                                <td data-title="Наименование разделов, дисциплин и тем">Итоговое занятие</td>
+                                <td data-title="Всего часов">4</td>
+                                <td data-title="Лекции">2</td>
+                                <td data-title="Практика">4</td>
+                                <td data-title="Форма контроля">Тестирование</td>
+                            </tr>
+                            <tr>
+                                <td data-title="№" class="__th"></td>
+                                <td data-title="Итого" class="is--table-title"></td>
+                                <td data-title="Всего часов">30</td>
+                                <td data-title="Лекции">8</td>
+                                <td data-title="Практика">22</td>
+                                <td data-title="Форма контроля" class="__th"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        @@include('items/_form.html')
+    </main>
+    @@include('main/_footer.html')
+    @@include('main/_scripts.html')
+</body>
+</html>
